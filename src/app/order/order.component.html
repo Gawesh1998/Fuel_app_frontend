@@ -1,0 +1,68 @@
+
+
+<div>
+    
+    <h1 class="a">Ordering Form</h1>
+
+    <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label class="b" for="name">Filling Station Name</label><br>
+            <input class="c" type="text" name="name" class="form-control" formControlName="name">
+        </div>
+        <span *ngIf="name && name.invalid && name.touched" class="text-red-500">
+            Filling Station Name is invalid!
+        </span> 
+        <pre></pre>
+
+        <div class="form-group">
+            <label class="b" for="license">License No.</label><br>
+            <input class="c" type="text" name="license" class="form-control" formControlName="license">
+        </div>
+        <span *ngIf="license && license.invalid && license.touched" class="text-red-500">
+            license No. is invalid!
+         </span> 
+        <pre></pre>
+
+        <div class="form-group">
+            <label class="b" for="vehicle">Vehicle Registered No.</label><br>
+            <input class="c" type="text" name="vehicle" class="form-control" formControlName="vehicle">
+        </div>
+        <span *ngIf="vehicle && vehicle.invalid && vehicle.touched" class="text-red-500">
+            Vehicle Registered No. is invalid!
+         </span> 
+        <pre></pre>
+
+        <div class="form-group">
+            <label class="b" for="fuelType">Fuel Type</label><br>
+            <select id="fuelType" name="" autocomplete="" [formControlName]="'fuelType'" class="c">
+                       <option value="type">Select Fuel Type</option>
+                       <option value="patrol">Patrol</option>
+                       <option value="diesel">Diesel</option>
+                   </select>
+                   <span *ngIf="fuelType && fuelType.invalid && fuelType.touched" class="text-red-500">
+                    Fuel Type is invalid!
+                 </span>
+                   <pre></pre>
+        </div>
+
+        <div class="form-group">
+            <label class="b" for="capacity">Capacity</label><br>
+            <select id="capacity" name="" autocomplete="" [formControlName]="'capacity'" class="c">
+                <option value="type">Select Capacity</option>
+                <option value="3300">3300</option>
+                <option value="6600">6600</option>
+                <option value="13200">13200</option>
+            </select>
+            <span *ngIf="capacity && capacity.invalid && capacity.touched" class="text-red-500">
+                Capacity is invalid!
+             </span>
+            <pre></pre>
+        </div>
+
+        <button class="d">Order</button>
+        <button class="d" routerLink="/add-users">Next</button><br>
+
+    </form>
+
+</div>

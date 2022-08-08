@@ -1,0 +1,1 @@
+export const fuelQuantityList: number[] = [3300, 6600, 13200];

@@ -1,0 +1,31 @@
+<div>
+    <h1 class="a"> Order View Table</h1>
+
+    <div class="topnav">
+        <input type="text" placeholder="Search..">
+    </div>
+
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Filling Station Name</th>
+                <th>License No.</th>
+                <th>Vehicle Registered No.</th>
+                <th>Fuel Type</th>
+                <th>Capacity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let view of data">
+                <td>{{view.id}}</td>
+                <td>{{view.name}}</td>
+                <td>{{view.license}}</td>
+                <td>{{view.vehicle}}</td>
+                <td>{{view.fuelType}}</td>
+                <td>{{view.capacity}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

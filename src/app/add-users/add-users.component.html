@@ -1,0 +1,61 @@
+<div>
+
+    <h1 class="a">Add Shedual Form</h1>
+
+    <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label class="b" for="date">Input Date</label><br>
+            <input class="c" type="date" name="date" class="form-control" formControlName="date">
+        </div>
+        <!-- <span *ngIf="date && date.invalid && date.touched" class="text-red-500">
+            Date is invalid!
+        </span>  -->
+        <pre></pre>
+
+        <div class="form-group">
+            <label class="b" for="name">Filling Station Name</label><br>
+            <input class="c" type="text" name="name" class="form-control" formControlName="name">
+        </div>
+        <span *ngIf="name && name.invalid && name.touched" class="text-red-500">
+            Filling Station Name is invalid!
+        </span> 
+        <pre></pre>
+
+        <div class="form-group">
+            <label class="b" for="license">License No.</label><br>
+            <input class="c" type="text" name="license" class="form-control" formControlName="license">
+        </div>
+        <span *ngIf="license && license.invalid && license.touched" class="text-red-500">
+            license No. is invalid!
+         </span> 
+        <pre></pre>
+
+        <div class="form-group">
+            <label class="b" for="vehicle">Vehicle Registered No.</label><br>
+            <input class="c" type="text" name="vehicle" class="form-control" formControlName="vehicle">
+        </div>
+        <span *ngIf="vehicle && vehicle.invalid && vehicle.touched" class="text-red-500">
+            Vehicle Registered No. is invalid!
+         </span> 
+        <pre></pre>
+
+        <div class="form-group">
+            <label class="b" for="shedualeDate">Sheduale Date</label><br>
+            <input class="c" type="date" name="shedualeDate" class="form-control" formControlName="shedualeDate">
+        </div>
+        <span *ngIf="shedualeDate && shedualeDate.invalid && shedualeDate.touched" class="text-red-500">
+            Sheduale is invalid!
+        </span> 
+        <pre></pre>
+        <pre></pre>
+        <pre></pre>
+
+        <button class="d">Submit</button>
+        <button class="d" routerLink="/add-dispatch">Next</button><br>
+
+
+    </form>
+
+</div>
+

@@ -1,0 +1,27 @@
+<div>
+
+    <h1 class="a">Sheduale Table</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Filling Station Name</th>
+                <th>License No.</th>
+                <th>Vehicle Registered No.</th>
+                <th>Schedule Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let items of data">
+                <td>{{items.id}}</td>
+                <td>{{items.date}}</td>
+                <td>{{items.name}}</td>
+                <td>{{items.license}}</td>
+                <td>{{items.vehicle}}</td>
+                <td>{{items.shedualeDate}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

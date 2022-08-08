@@ -1,0 +1,68 @@
+<div>
+
+    <h1 class="a">Add Dispatch form</h1>
+
+    <form [formGroup]="dispatchForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label class="b" for="date">Input Date</label><br>
+            <input class="c" type="date" name="date" class="form-control" formControlName="date">
+        </div>
+        <span *ngIf="date && date.invalid && date.touched" class="text-red-500">
+            Date is invalid!
+        </span> 
+        <pre></pre>
+
+        <div class="form-group">
+            <!-- <label class="b" for="date">Date</label><br> -->
+            <!-- <my-date-picker name="mydate" [options]="myDatePickerOptions"
+                    formControlName="myDate">Date</my-date-picker> -->
+            <!-- <input class="c" type="text" name="date" class="form-control" formControlName="date"> -->
+        </div>
+        <!-- <span *ngIf="date && date.invalid && date.touched" class="text-red-500">
+            Date is invalid!
+        </span>  -->
+        <pre></pre>
+
+        <div class="form-group">
+            <label class="b" for="name">Filling Station Name</label><br>
+            <input class="c" type="text" name="name" class="form-control" formControlName="name">
+        </div>
+        <span *ngIf="name && name.invalid && name.touched" class="text-red-500">
+            Filling Station Name is invalid!
+        </span> 
+        <pre></pre>
+
+        <div class="form-group">
+            <label class="b" for="license">License No.</label><br>
+            <input class="c" type="text" name="license" class="form-control" formControlName="license">
+        </div>
+        <span *ngIf="license && license.invalid && license.touched" class="text-red-500">
+            license No. is invalid!
+         </span> 
+        <pre></pre>
+
+        <div class="form-group">
+            <label class="b" for="vehicle">Vehicle Registered No.</label><br>
+            <input class="c" type="text" name="vehicle" class="form-control" formControlName="vehicle">
+        </div>
+        <span *ngIf="vehicle && vehicle.invalid && vehicle.touched" class="text-red-500">
+            Vehicle Registered No. is invalid!
+         </span> 
+        <pre></pre>
+
+        <div class="form-group">
+            <label class="b" for="status">Status</label><br>
+            <input class="c" type="text" name="status" class="form-control" formControlName="status">
+        </div>
+        <span *ngIf="status && status.invalid && status.touched" class="text-red-500">
+            Status is invalid!
+        </span> 
+        <pre></pre>
+
+        <button class="d">Submit</button><br>
+
+    </form>
+
+</div>
+

@@ -1,0 +1,31 @@
+<div>
+    <h1 class="a"> Dispatch Table</h1>
+
+    <div class="topnav">
+        <input type="text" placeholder="Search..">
+    </div>
+
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Filling Station Name</th>
+                <th>License No.</th>
+                <th>Vehicle No.</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of data">
+                <td>{{item.id}}</td>
+                <td>{{item.date}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.license}}</td>
+                <td>{{item.vehicle}}</td>
+                <td>{{item.status}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

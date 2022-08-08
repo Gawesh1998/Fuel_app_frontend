@@ -1,0 +1,33 @@
+<div>
+
+    <a class="g" routerLink="/adminlogin">Admin Login Here</a>
+
+    <h1 class="a">Login</h1>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label class="b" for="licenseNo">License No.</label><br>
+            <input class="c" type="text" name="licenseNo" class="form-control" formControlName="licenseNo">
+        </div>
+        <span *ngIf="licenseNo && licenseNo.invalid && licenseNo.touched" class="text-red-500">
+            License No. is invalid!
+        </span>
+        <pre></pre>
+
+        <div class="form-group">
+            <label class="b" for="password">Password</label><br>
+            <input class="c" type="text" name="password" class="form-control" formControlName="password">
+        </div>
+        <span *ngIf="password && password.invalid && password.touched" class="text-red-500">
+            Password is invalid!
+        </span>
+        <pre></pre>
+
+        <button class="d">Login</button><br>
+        <label class="e">If you are not registered?, just click on Register Here. | </label>
+        <a class="f" routerLink="/register">Register Here</a>
+
+    </form>
+
+</div>
